@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = "django-insecure-^&4-oj7ps#=4)d+tgr(5_*(#zum$%-a8*hb247ffrc*=k=7^gv"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 # ALLOWED_HOSTS = ["django-ecom-ois.herokuapp.com", "127.0.0.1"]
 # ALLOWED_HOSTS = ['localhost', '127.0.0.1','https://tm-sys-dashbobord.herokuapp.com/', config('SERVER', default='127.0.0.1')]
@@ -120,20 +120,20 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
-STATIC_URL = "/static/"
-STATICFILES_DIRS = [BASE_DIR / "static"]
-STATIC_ROOT = BASE_DIR / "static_cdn"
-# The URL to use when referring to static files (where they will be served from)
 # STATIC_URL = "/static/"
+# STATICFILES_DIRS = [BASE_DIR / "static"]
+# STATIC_ROOT = BASE_DIR / "static_cdn"
+# The URL to use when referring to static files (where they will be served from)
+STATIC_URL = "/static/"
 
 # The absolute path to the directory where collectstatic will collect static files for deployment.
-# STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
+STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 
 # Extra places for collectstatic to find static files.
-# STATICFILES_DIRS = (os.path.join(BASE_DIR, "static"),)
+STATICFILES_DIRS = (os.path.join(BASE_DIR, "static"),)
 MEDIA_URL = "/media/"
-MEDIA_ROOT = BASE_DIR / "media"
-# MEDIA_ROOT = os.path.join(BASE_DIR, "media")
+# MEDIA_ROOT = BASE_DIR / "media"
+MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
